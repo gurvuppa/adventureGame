@@ -29,6 +29,7 @@ namespace adventureGame
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.outputLabel = new System.Windows.Forms.Label();
             this.option1Label = new System.Windows.Forms.Label();
             this.option2Label = new System.Windows.Forms.Label();
@@ -151,6 +152,7 @@ namespace adventureGame
             this.Controls.Add(this.option2Label);
             this.Controls.Add(this.option1Label);
             this.Controls.Add(this.outputLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "The Search ";
             ((System.ComponentModel.ISupportInitialize)(this.imageBox)).EndInit();

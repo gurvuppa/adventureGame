@@ -95,5 +95,116 @@
   <ItemGroup>
     <None Include="Resources\kneelingKnight.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2_knights_by_the1337chef_d4uzxv0-fullview.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\betterImageOfHouse.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\climbingPit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dark_Souls_You_Died_Screen_-_Completely_Black_Screen_0-2_screenshot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deepPit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\helpingHand.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\house with princess.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\killingTheKing.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\king killing man.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kingThanking you.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\knight_riding_horse_shield_lance_flag_drawing_by_apatrimonio_davoj3d-fullview.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\knighthood.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mysteryMan.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mysteryManBetter.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\questFaild.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\twoKights.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\happyWolves.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hungryWolves.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\betterBitingWolve.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gamOver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\armorClanging.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\creepyLaugh.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deathGrunt.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gameOver.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\horseRunning.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\knightDeath.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\knightWalking.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\questComplete.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\questSound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wind.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wolfGrowl.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wolfHowl.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wolfRunning.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deathSound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\liftingSound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\failed.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\slowWalking.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

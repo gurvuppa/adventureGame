@@ -18,6 +18,8 @@ namespace adventureGame
         int page = 1;
         int pageChance;
 
+        SoundPlayer musicPlayer;
+
         Random RandGen = new Random();      // create random number generator
 
         public Form1()
@@ -67,13 +69,13 @@ namespace adventureGame
                 pageChance = RandGen.Next(1, 101);
                 if (pageChance > 70)
                 {
-                     page = 22; 
+                    page = 22;
                 }
                 else
                 {
                     page = 23;
                 }
-            } 
+            }
             else if (page == 19) { page = 1; }
             else if (page == 20) { page = 1; }
             else if (page == 21) { page = 1; }
@@ -144,6 +146,13 @@ namespace adventureGame
                 case 1:
                     option3Button.Visible = true;
                     option3Label.Visible = true;
+
+                    musicPlayer = new SoundPlayer(Properties.Resources.questSound);
+                    musicPlayer.Play();
+
+
+                    imageBox.Image = Properties.Resources.kneelingKnight;
+
                     outputLabel.Text = "The King summons you to his castle. He sets you on a quest to find the lost princess.";
                     option1Label.Text = "Accept";
                     option2Label.Text = "Disobey";
@@ -152,13 +161,22 @@ namespace adventureGame
                 case 2:
                     option3Button.Visible = false;
                     option3Label.Visible = false;
-                    outputLabel.Text = "The king offer to send a companion with you";
+
+                    imageBox.Image = Properties.Resources.twoKights;
+
+                    outputLabel.Text = "The king offers to send a companion with you";
                     option1Label.Text = "Accept";
                     option2Label.Text = "Decline";
                     break;
                 case 3:
                     option3Button.Visible = false;
                     option3Label.Visible = false;
+
+                    musicPlayer = new SoundPlayer(Properties.Resources.knightDeath);
+                    musicPlayer.Play();
+
+                    imageBox.Image = Properties.Resources.king_killing_man;
+
                     outputLabel.Text = "The King comes down from his thrown, draws his sword and chops your head off. Play again?";
                     option1Label.Text = "Yes";
                     option2Label.Text = "No";
@@ -166,128 +184,278 @@ namespace adventureGame
                 case 4:
                     option3Button.Visible = false;
                     option3Label.Visible = false;
-                    outputLabel.Text = "You run as fast as lighting straight to the king and slice his head off. The town thanks you for ending his horrible rein and make you king. Play again?";
+
+                    musicPlayer = new SoundPlayer(Properties.Resources.deathGrunt);
+                    musicPlayer.Play();
+
+                   imageBox.Image = Properties.Resources.killingTheKing;
+
+                    outputLabel.Text = "You run as fast as lighting straight to the king and slice his head off. The town thanks you for ending his horrible rein and makes you king. Play again?";
                     option1Label.Text = "Yes";
                     option2Label.Text = "No";
                     break;
                 case 5:
                     option3Button.Visible = false;
                     option3Label.Visible = false;
+
+                    musicPlayer = new SoundPlayer(Properties.Resources.deathSound);
+                    musicPlayer.Play();
+
+                   imageBox.Image = Properties.Resources.Dark_Souls_You_Died_Screen___Completely_Black_Screen_0_2_screenshot;
+
                     outputLabel.Text = "The king and his guards jump on you as soon as you stand and beat you to a pulp. Play again?";
                     option1Label.Text = "Yes";
                     option2Label.Text = "No";
                     break;
                 case 6:
-                    outputLabel.Text = "You set off on your quest but very slowly because your new companion is extremely slow";
+
+                    imageBox.Image = Properties.Resources._2_knights_by_the1337chef_d4uzxv0_fullview;
+
+                    musicPlayer = new SoundPlayer(Properties.Resources.slowWalking);
+                    musicPlayer.Play();
+
+                   outputLabel.Text = "You set off on your quest but very slowly because your new companion is extremely slow";
                     option1Label.Text = "Go North";
                     option2Label.Text = "Go South";
                     break;
                 case 7:
-                    outputLabel.Text = "You set off on your quest with swift speed and are confident you will find the princess within hours.";
+
+                    imageBox.Image = Properties.Resources.knight_riding_horse_shield_lance_flag_drawing_by_apatrimonio_davoj3d_fullview;
+
+                    musicPlayer = new SoundPlayer(Properties.Resources.horseRunning);
+                    musicPlayer.Play();
+
+                   outputLabel.Text = "You set off on your quest with swift speed and are confident you will find the princess within hours.";
                     option1Label.Text = "Go North";
                     option2Label.Text = "Go South";
                     break;
                 case 8:
-                    outputLabel.Text = "You come across a house where you find the princess. You bring her back to the king and he thanks you. Play again?";
+
+                    imageBox.Image = Properties.Resources.kingThanking_you;
+
+                    musicPlayer = new SoundPlayer(Properties.Resources.questComplete);
+                    musicPlayer.Play();
+
+                   outputLabel.Text = "You come across a house where you find the princess. You bring her back to the king and he thanks you. Play again?";
                     option1Label.Text = "Yes";
                     option2Label.Text = "No";
                     break;
                 case 9:
-                    outputLabel.Text = "You fall into a pit because you were running too fast and become trapped.";
+
+                    imageBox.Image = Properties.Resources.deepPit;
+
+                    musicPlayer = new SoundPlayer(Properties.Resources.Wind);
+                    musicPlayer.Play();
+
+                   outputLabel.Text = "You fall into a pit because you were running too fast and become trapped.";
                     option1Label.Text = "Ask companion for help";
                     option2Label.Text = "Try to get out alone";
                     break;
                 case 10:
+
+                    imageBox.Image = Properties.Resources.kingThanking_you;
+
+                    musicPlayer = new SoundPlayer(Properties.Resources.questComplete);
+                    musicPlayer.Play();
+
                     outputLabel.Text = "You come across a house where you find the princess. You bring her back to the king and he thanks you. Play again?";
                     option1Label.Text = "Yes";
                     option2Label.Text = "No";
                     break;
                 case 11:
-                    outputLabel.Text = "You fall into a pit because you were running too fast and become trapped. ";
+
+                    imageBox.Image = Properties.Resources.deepPit;
+
+                    musicPlayer = new SoundPlayer(Properties.Resources.Wind);
+                    musicPlayer.Play();
+
+                    outputLabel.Text = "You fall into a pit because you were riding your horse too fast and become trapped.";
                     option1Label.Text = "Try to get out";
                     option2Label.Text = "Give up";
                     break;
                 case 12:
-                    outputLabel.Text = "Your companion gives you a hand and helps you out. You guys grow tired as night falls.";
+
+                    imageBox.Image = Properties.Resources.helpingHand;
+
+                    musicPlayer = new SoundPlayer(Properties.Resources.liftingSound);
+                    musicPlayer.Play();
+
+                    outputLabel.Text = "Your companion gives you a hand and helps you out. You grow tired as night falls.";
                     option1Label.Text = "Go to the nearby village and rest";
                     option2Label.Text = "Keep searching";
                     break;
                 case 13:
+
+                    imageBox.Image = Properties.Resources.Dark_Souls_You_Died_Screen___Completely_Black_Screen_0_2_screenshot;
+
+                    musicPlayer = new SoundPlayer(Properties.Resources.deathSound);
+                    musicPlayer.Play();
+
                     outputLabel.Text = "You try to get out alone but fall backwards and crack your head. You die. Play again?";
                     option1Label.Text = "Yes";
                     option2Label.Text = "No";
                     break;
                 case 14:
+
+                    imageBox.Image = Properties.Resources.Dark_Souls_You_Died_Screen___Completely_Black_Screen_0_2_screenshot;
+
+                    musicPlayer = new SoundPlayer(Properties.Resources.deathSound);
+                    musicPlayer.Play();
+
                     outputLabel.Text = "You stay trapped in the pit forever and die from starvation. Play again?";
                     option1Label.Text = "Yes";
                     option2Label.Text = "No";
                     break;
                 case 15:
+
+                    imageBox.Image = Properties.Resources.Dark_Souls_You_Died_Screen___Completely_Black_Screen_0_2_screenshot;
+
+                    musicPlayer = new SoundPlayer(Properties.Resources.deathSound);
+                    musicPlayer.Play();
+
                     outputLabel.Text = "As soon as you escape from the pit you get trampled by horse and die. Play again?";
                     option1Label.Text = "Yes";
                     option2Label.Text = "No";
                     break;
                 case 16:
+
+                    imageBox.Image = Properties.Resources.Dark_Souls_You_Died_Screen___Completely_Black_Screen_0_2_screenshot;
+
+                    musicPlayer = new SoundPlayer(Properties.Resources.deathSound);
+                    musicPlayer.Play();
+
                     outputLabel.Text = "You fall backwards trying to escape, break your neck and die. Play again?";
                     option1Label.Text = "Yes";
                     option2Label.Text = "No";
                     break;
                 case 17:
+
+                    imageBox.Image = Properties.Resources.mysteryManBetter;
+
+                    musicPlayer = new SoundPlayer(Properties.Resources.creepyLaugh);
+                    musicPlayer.Play();
+
                     outputLabel.Text = "You travel to the village. You find an inn and spend the night there. When you wake a mysterious man tells you where the princess is located ";
                     option1Label.Text = "Believe him";
                     option2Label.Text = "Don't believe him ";
                     break;
                 case 18:
+
+                    imageBox.Image = Properties.Resources.hungryWolves;
+
+                    musicPlayer = new SoundPlayer(Properties.Resources.wolfHowl);
+                    musicPlayer.Play();
+
                     outputLabel.Text = "You run into a pack of blood hungry wolves. But luckily you're a natural wolf whisperer. ";
                     option1Label.Text = "Tame the wolves";
                     option2Label.Text = "Fight the wolves";
                     break;
                 case 19:
-                    outputLabel.Text = "You arrive where the mysterious man told you to go. The lost princess is there You bring her back to the castle and complete your quest. Play again?";
+
+                    imageBox.Image = Properties.Resources.betterImageOfHouse;
+
+                    musicPlayer = new SoundPlayer(Properties.Resources.questComplete);
+                    musicPlayer.Play();
+
+                    outputLabel.Text = "You arrive where the mysterious man told you to go. The lost princess is there. You bring her back to the castle and complete your quest. Play again?";
                     option1Label.Text = "Yes";
                     option2Label.Text = "No";
                     break;
                 case 20:
+
+                    imageBox.Image = Properties.Resources.questFaild;
+
+                    musicPlayer = new SoundPlayer(Properties.Resources.failed);
+                    musicPlayer.Play();
+
                     outputLabel.Text = "You don't believe him and you are not able to find the princess. She is lost forever. You fail. Play again?";
                     option1Label.Text = "Yes";
                     option2Label.Text = "No";
                     break;
                 case 21:
-                    outputLabel.Text = "Your companion is scared to death of wolves which leads you to be eaten alive. You die. Play again?";
+
+                    imageBox.Image = Properties.Resources.betterBitingWolve;
+
+                    musicPlayer = new SoundPlayer(Properties.Resources.wolfGrowl);
+                    musicPlayer.Play();
+
+                    outputLabel.Text = "Your companion is scared to death by wolves which leads you to be eaten alive. You die. Play again?";
                     option1Label.Text = "Yes";
                     option2Label.Text = "No";
                     break;
                 case 22:
+
+                    imageBox.Image = Properties.Resources.happyWolves;
+
+                    musicPlayer = new SoundPlayer(Properties.Resources.questComplete);
+                    musicPlayer.Play();
+
                     outputLabel.Text = "You tame the wolves and take them on your quest. The wolves pick up 2 scents of the princess";
                     option1Label.Text = "Scent 1";
                     option2Label.Text = "Scent 2";
                     break;
                 case 23:
+
+                    imageBox.Image = Properties.Resources.Dark_Souls_You_Died_Screen___Completely_Black_Screen_0_2_screenshot;
+
+                    musicPlayer = new SoundPlayer(Properties.Resources.deathSound);
+                    musicPlayer.Play();
+
                     outputLabel.Text = "The wolves eat you alive and you die. Play again?";
                     option1Label.Text = "Yes";
                     option2Label.Text = "No";
                     break;
                 case 24:
+
+                    imageBox.Image = Properties.Resources.mysteryManBetter;
+
+                    musicPlayer = new SoundPlayer(Properties.Resources.creepyLaugh);
+                    musicPlayer.Play();
+
                     outputLabel.Text = "The wolves take you to a village where you meet a mysterious man. He tells you the location of the princess";
                     option1Label.Text = "Believe him";
                     option2Label.Text = "Don't believe him";
                     break;
                 case 25:
-                    outputLabel.Text = "You follow the dogs to a house. When you go inside you find the lost princess. You bring her back to the castle and complete your quest. Play again?";
+
+                    imageBox.Image = Properties.Resources.kingThanking_you;
+
+                    musicPlayer = new SoundPlayer(Properties.Resources.questComplete);
+                    musicPlayer.Play();
+
+                    outputLabel.Text = "You follow the wolves to a house. When you go inside you find the lost princess. You bring her back to the castle and complete your quest. Play again?";
                     option1Label.Text = "Yes";
                     option2Label.Text = "No";
                     break;
                 case 26:
+
+                    imageBox.Image = Properties.Resources.kingThanking_you;
+
+                    musicPlayer = new SoundPlayer(Properties.Resources.questComplete);
+                    musicPlayer.Play();
+
                     outputLabel.Text = "You arrive where the mysterious man told you to go. The lost princess is there. You bring her back to the castle and complete your quest. Play again?";
                     option1Label.Text = "Yes";
                     option2Label.Text = "No";
                     break;
                 case 27:
-                    outputLabel.Text = "The dogs lose the other scent of the princess. you are not able to find the princess. She is lost forever. You fail. Play again?";
+
+                    imageBox.Image = Properties.Resources.questFaild;
+
+                    musicPlayer = new SoundPlayer(Properties.Resources.failed);
+                    musicPlayer.Play();
+
+                    outputLabel.Text = "The wolves lose the other scent of the princess. you are not able to find the princess. She is lost forever. You fail. Play again?";
                     option1Label.Text = "Yes";
                     option2Label.Text = "No";
                     break;
                 case 30:
+
+                    imageBox.Image = Properties.Resources.gamOver;
+
+                    musicPlayer = new SoundPlayer(Properties.Resources.gameOver);
+                    musicPlayer.Play();
+
                     outputLabel.Text = "Thank you for playing";
                     option1Label.Text = "";
                     option2Label.Text = "";
