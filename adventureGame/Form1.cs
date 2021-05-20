@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * Gurvir Uppal
+ * Adventure Game (The Search)
+ * May 19, 2021 
+ * Mr.T 
+ * ICS3U
+ * */
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,7 +39,6 @@ namespace adventureGame
         {
             /// Check what page we are currently on, and then flip
             /// to the page you need to go to if you selected option 1
-
             if (page == 1)
             {
                 page = 2;
@@ -49,7 +55,7 @@ namespace adventureGame
             else if (page == 11)
             {
                 pageChance = RandGen.Next(1, 101);
-                if (pageChance > 50)
+                if (pageChance > 50)                      //50% chance of getting this outcome
                 {
                     page = 15;
                 }
@@ -67,7 +73,7 @@ namespace adventureGame
             else if (page == 18)
             {
                 pageChance = RandGen.Next(1, 101);
-                if (pageChance > 70)
+                if (pageChance > 70)                      //70% chance of getting this outcome
                 {
                     page = 22;
                 }
@@ -128,7 +134,7 @@ namespace adventureGame
             if (page == 1)
             {
                 pageChance = RandGen.Next(1, 101);
-                if (pageChance < 20)
+                if (pageChance < 20)                             //20% chance of getting this outcome
                 {
                     page = 4;
                 }
@@ -144,14 +150,13 @@ namespace adventureGame
             switch (page)
             {
                 case 1:
-                    option3Button.Visible = true;
-                    option3Label.Visible = true;
+                    option3Button.Visible = true;                                           //set button 3's visibility to true 
+                    option3Label.Visible = true;                                            //set label 3's visibility to true
 
                     musicPlayer = new SoundPlayer(Properties.Resources.questSound);
-                    musicPlayer.Play();
+                    musicPlayer.Play();                                                     //play music player 
 
-
-                    imageBox.Image = Properties.Resources.kneelingKnight;
+                    imageBox.Image = Properties.Resources.kneelingKnight;                   //print this image in the image box
 
                     outputLabel.Text = "The King summons you to his castle. He sets you on a quest to find the lost princess.";
                     option1Label.Text = "Accept";
@@ -159,8 +164,8 @@ namespace adventureGame
                     option3Label.Text = "Overthrow the king";
                     break;
                 case 2:
-                    option3Button.Visible = false;
-                    option3Label.Visible = false;
+                    option3Button.Visible = false;                                      //set button 3's visibility to false
+                    option3Label.Visible = false;                                       //set label 3's visibility to false
 
                     imageBox.Image = Properties.Resources.twoKights;
 
@@ -188,7 +193,7 @@ namespace adventureGame
                     musicPlayer = new SoundPlayer(Properties.Resources.deathGrunt);
                     musicPlayer.Play();
 
-                   imageBox.Image = Properties.Resources.killingTheKing;
+                    imageBox.Image = Properties.Resources.killingTheKing;
 
                     outputLabel.Text = "You run as fast as lighting straight to the king and slice his head off. The town thanks you for ending his horrible rein and makes you king. Play again?";
                     option1Label.Text = "Yes";
@@ -201,58 +206,53 @@ namespace adventureGame
                     musicPlayer = new SoundPlayer(Properties.Resources.deathSound);
                     musicPlayer.Play();
 
-                   imageBox.Image = Properties.Resources.Dark_Souls_You_Died_Screen___Completely_Black_Screen_0_2_screenshot;
+                    imageBox.Image = Properties.Resources.Dark_Souls_You_Died_Screen___Completely_Black_Screen_0_2_screenshot;
 
                     outputLabel.Text = "The king and his guards jump on you as soon as you stand and beat you to a pulp. Play again?";
                     option1Label.Text = "Yes";
                     option2Label.Text = "No";
                     break;
                 case 6:
-
                     imageBox.Image = Properties.Resources._2_knights_by_the1337chef_d4uzxv0_fullview;
 
                     musicPlayer = new SoundPlayer(Properties.Resources.slowWalking);
                     musicPlayer.Play();
 
-                   outputLabel.Text = "You set off on your quest but very slowly because your new companion is extremely slow";
+                    outputLabel.Text = "You set off on your quest but very slowly because your new companion is extremely slow";
                     option1Label.Text = "Go North";
                     option2Label.Text = "Go South";
                     break;
                 case 7:
-
                     imageBox.Image = Properties.Resources.knight_riding_horse_shield_lance_flag_drawing_by_apatrimonio_davoj3d_fullview;
 
                     musicPlayer = new SoundPlayer(Properties.Resources.horseRunning);
                     musicPlayer.Play();
 
-                   outputLabel.Text = "You set off on your quest with swift speed and are confident you will find the princess within hours.";
+                    outputLabel.Text = "You set off on your quest with swift speed and are confident you will find the princess within hours.";
                     option1Label.Text = "Go North";
                     option2Label.Text = "Go South";
                     break;
                 case 8:
-
                     imageBox.Image = Properties.Resources.kingThanking_you;
 
                     musicPlayer = new SoundPlayer(Properties.Resources.questComplete);
                     musicPlayer.Play();
 
-                   outputLabel.Text = "You come across a house where you find the princess. You bring her back to the king and he thanks you. Play again?";
+                    outputLabel.Text = "You come across a house where you find the princess. You bring her back to the king and he thanks you. Play again?";
                     option1Label.Text = "Yes";
                     option2Label.Text = "No";
                     break;
                 case 9:
-
                     imageBox.Image = Properties.Resources.deepPit;
 
                     musicPlayer = new SoundPlayer(Properties.Resources.Wind);
                     musicPlayer.Play();
 
-                   outputLabel.Text = "You fall into a pit because you were running too fast and become trapped.";
+                    outputLabel.Text = "You fall into a pit because you were running too fast and become trapped.";
                     option1Label.Text = "Ask companion for help";
                     option2Label.Text = "Try to get out alone";
                     break;
                 case 10:
-
                     imageBox.Image = Properties.Resources.kingThanking_you;
 
                     musicPlayer = new SoundPlayer(Properties.Resources.questComplete);
@@ -263,7 +263,6 @@ namespace adventureGame
                     option2Label.Text = "No";
                     break;
                 case 11:
-
                     imageBox.Image = Properties.Resources.deepPit;
 
                     musicPlayer = new SoundPlayer(Properties.Resources.Wind);
@@ -274,7 +273,6 @@ namespace adventureGame
                     option2Label.Text = "Give up";
                     break;
                 case 12:
-
                     imageBox.Image = Properties.Resources.helpingHand;
 
                     musicPlayer = new SoundPlayer(Properties.Resources.liftingSound);
@@ -285,7 +283,6 @@ namespace adventureGame
                     option2Label.Text = "Keep searching";
                     break;
                 case 13:
-
                     imageBox.Image = Properties.Resources.Dark_Souls_You_Died_Screen___Completely_Black_Screen_0_2_screenshot;
 
                     musicPlayer = new SoundPlayer(Properties.Resources.deathSound);
@@ -296,7 +293,6 @@ namespace adventureGame
                     option2Label.Text = "No";
                     break;
                 case 14:
-
                     imageBox.Image = Properties.Resources.Dark_Souls_You_Died_Screen___Completely_Black_Screen_0_2_screenshot;
 
                     musicPlayer = new SoundPlayer(Properties.Resources.deathSound);
@@ -307,7 +303,6 @@ namespace adventureGame
                     option2Label.Text = "No";
                     break;
                 case 15:
-
                     imageBox.Image = Properties.Resources.Dark_Souls_You_Died_Screen___Completely_Black_Screen_0_2_screenshot;
 
                     musicPlayer = new SoundPlayer(Properties.Resources.deathSound);
@@ -318,7 +313,6 @@ namespace adventureGame
                     option2Label.Text = "No";
                     break;
                 case 16:
-
                     imageBox.Image = Properties.Resources.Dark_Souls_You_Died_Screen___Completely_Black_Screen_0_2_screenshot;
 
                     musicPlayer = new SoundPlayer(Properties.Resources.deathSound);
@@ -329,7 +323,6 @@ namespace adventureGame
                     option2Label.Text = "No";
                     break;
                 case 17:
-
                     imageBox.Image = Properties.Resources.mysteryManBetter;
 
                     musicPlayer = new SoundPlayer(Properties.Resources.creepyLaugh);
@@ -340,7 +333,6 @@ namespace adventureGame
                     option2Label.Text = "Don't believe him ";
                     break;
                 case 18:
-
                     imageBox.Image = Properties.Resources.hungryWolves;
 
                     musicPlayer = new SoundPlayer(Properties.Resources.wolfHowl);
@@ -351,7 +343,6 @@ namespace adventureGame
                     option2Label.Text = "Fight the wolves";
                     break;
                 case 19:
-
                     imageBox.Image = Properties.Resources.betterImageOfHouse;
 
                     musicPlayer = new SoundPlayer(Properties.Resources.questComplete);
@@ -362,7 +353,6 @@ namespace adventureGame
                     option2Label.Text = "No";
                     break;
                 case 20:
-
                     imageBox.Image = Properties.Resources.questFaild;
 
                     musicPlayer = new SoundPlayer(Properties.Resources.failed);
@@ -373,7 +363,6 @@ namespace adventureGame
                     option2Label.Text = "No";
                     break;
                 case 21:
-
                     imageBox.Image = Properties.Resources.betterBitingWolve;
 
                     musicPlayer = new SoundPlayer(Properties.Resources.wolfGrowl);
@@ -384,7 +373,6 @@ namespace adventureGame
                     option2Label.Text = "No";
                     break;
                 case 22:
-
                     imageBox.Image = Properties.Resources.happyWolves;
 
                     musicPlayer = new SoundPlayer(Properties.Resources.questComplete);
@@ -395,7 +383,6 @@ namespace adventureGame
                     option2Label.Text = "Scent 2";
                     break;
                 case 23:
-
                     imageBox.Image = Properties.Resources.Dark_Souls_You_Died_Screen___Completely_Black_Screen_0_2_screenshot;
 
                     musicPlayer = new SoundPlayer(Properties.Resources.deathSound);
@@ -406,7 +393,6 @@ namespace adventureGame
                     option2Label.Text = "No";
                     break;
                 case 24:
-
                     imageBox.Image = Properties.Resources.mysteryManBetter;
 
                     musicPlayer = new SoundPlayer(Properties.Resources.creepyLaugh);
@@ -417,7 +403,6 @@ namespace adventureGame
                     option2Label.Text = "Don't believe him";
                     break;
                 case 25:
-
                     imageBox.Image = Properties.Resources.kingThanking_you;
 
                     musicPlayer = new SoundPlayer(Properties.Resources.questComplete);
@@ -428,7 +413,6 @@ namespace adventureGame
                     option2Label.Text = "No";
                     break;
                 case 26:
-
                     imageBox.Image = Properties.Resources.kingThanking_you;
 
                     musicPlayer = new SoundPlayer(Properties.Resources.questComplete);
@@ -439,7 +423,6 @@ namespace adventureGame
                     option2Label.Text = "No";
                     break;
                 case 27:
-
                     imageBox.Image = Properties.Resources.questFaild;
 
                     musicPlayer = new SoundPlayer(Properties.Resources.failed);
@@ -450,7 +433,6 @@ namespace adventureGame
                     option2Label.Text = "No";
                     break;
                 case 30:
-
                     imageBox.Image = Properties.Resources.gamOver;
 
                     musicPlayer = new SoundPlayer(Properties.Resources.gameOver);
